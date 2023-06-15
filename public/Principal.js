@@ -20,6 +20,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/assets/scss/index.scss":
+/*!************************************!*\
+  !*** ./src/assets/scss/index.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://stack-webpack/./src/assets/scss/index.scss?");
+
+/***/ }),
+
 /***/ "./src/Pessoa.js":
 /*!***********************!*\
   !*** ./src/Pessoa.js ***!
@@ -38,7 +49,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pessoa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pessoa */ \"./src/Pessoa.js\");\n/* harmony import */ var _modules_ModuloA__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ModuloA */ \"./src/modules/ModuloA.js\");\n/* harmony import */ var _assets_css_estilos_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/css/estilos.css */ \"./src/assets/css/estilos.css\");\n\r\n\r\n\r\n// const Pessoa = require('./Pessoa')\r\n\r\nconst atendente = new _Pessoa__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\nconsole.log(atendente.cumprimentar())\n\n//# sourceURL=webpack://stack-webpack/./src/Principal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Pessoa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pessoa */ \"./src/Pessoa.js\");\n/* harmony import */ var _modules_ModuloA__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/ModuloA */ \"./src/modules/ModuloA.js\");\n/* harmony import */ var _assets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets */ \"./src/assets/index.js\");\n\r\n\r\n\r\n// const Pessoa = require('./Pessoa')\r\n\r\nconst atendente = new _Pessoa__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\r\nconsole.log(atendente.cumprimentar())\n\n//# sourceURL=webpack://stack-webpack/./src/Principal.js?");
+
+/***/ }),
+
+/***/ "./src/assets/index.js":
+/*!*****************************!*\
+  !*** ./src/assets/index.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_estilos_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/estilos.css */ \"./src/assets/css/estilos.css\");\n/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/index.scss */ \"./src/assets/scss/index.scss\");\n\r\n\n\n//# sourceURL=webpack://stack-webpack/./src/assets/index.js?");
 
 /***/ }),
 

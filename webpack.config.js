@@ -21,12 +21,13 @@ module.exports = {
     module: {
         rules: [{
             // responsavel por ler css
-            test: /\.css$/,
+            test: /\.s?[ac]ss$/,
             use: [
                 // extrai o css para um arquivo externo
                 MiniCssExtractPlugin.loader,
                 // 'style-loader', // adiciona css no DOM injetando a tag style
-                'css-loader'
+                'css-loader',
+                'sass-loader'
             ]
         }]
     }

@@ -6,6 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const modoDev = process.env.NODE_ENV !== 'production'
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const path = require('path');
 
 // vamos dizer se estamos no modulo desenvolvimento ou produção 
 module.exports = {
@@ -17,7 +18,9 @@ module.exports = {
         path: __dirname + '/public'
     },
     devServer: {
-        contentBase: "./public",
+        static: {
+            directory: path.resolve(__dirname, 'public'),
+        },
         port: 9000
     },
     plugins: [
@@ -56,7 +59,8 @@ module.exports = {
         },{
             test: /\.(png|svg|jpg|gif)$/,
             use: ['file-loader']
-        }
+          }
+          
     ]
     }
 }

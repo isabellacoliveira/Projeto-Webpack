@@ -1,22 +1,46 @@
 // arquivo interpretado pelo node 
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+// se estiver em modulo de desenvolvimento 
+const modoDev = process.env.NODE_ENV !== 'production'
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 // vamos dizer se estamos no modulo desenvolvimento ou produção 
 module.exports = {
-    mode: 'development', 
+    mode: modoDev ? 'development' : 'production', 
     entry: './src/Principal.js',
     output: {
         filename: 'Principal.js',
         // pasta de destino que queremos salvar 
         path: __dirname + '/public'
     },
+    devServer: {
+        contentBase: "./public",
+        port: 9000
+    },
     plugins: [
         new MiniCssExtractPlugin({
             // nome do arquivo que sera gerado a partir da interpretação do css
             filename: "estilo.css"
-        })
+        }),
+        new TerserPlugin({
+            parallel: true,
+            terserOptions: {
+                ecma: 6,
+            },
+        }),
     ],
+    optimization: {
+        minimizer: [
+            // new UglifyJsPlugin({
+            //     cache: true, 
+            //     parallel: true
+            // }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    },
     // vamos cadastrar o loader 
     module: {
         rules: [{
@@ -29,6 +53,10 @@ module.exports = {
                 'css-loader',
                 'sass-loader'
             ]
-        }]
+        },{
+            test: /\.(png|svg|jpg|gif)$/,
+            use: ['file-loader']
+        }
+    ]
     }
 }
